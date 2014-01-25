@@ -1,13 +1,16 @@
 class window.AppView extends Backbone.View
 
+  className: 'app-container'
+
   template: _.template '
+    <h1>Blackjack</h1>
     <div class="scoreboard">
       <label class ="wins-label">Wins</label><p class="winCount"><%= wins %></p>
       <label class ="losses-label">Losses</label><p class="lossCount"><%= losses %></p>
     </div>
-    <button class="hit-button container">Hit</button> 
-    <button class="stand-button container">Stand</button>
-    <button class="reset-button container" style="display: none"></button>
+    <div class="button"><button class="hit-button container">Hit</button></div>
+    <div class="button"><button class="stand-button container">Stand</button></div>
+    <div class="button"><button class="reset-button container" style="display: none"></button></div>
     <div class="player-hand-container container"></div>
     <div class="dealer-hand-container container"></div>
   '

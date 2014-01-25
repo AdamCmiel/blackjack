@@ -1,10 +1,27 @@
 body {
   font-family: sans-serif;
+  text-align: center;
   color: white;
   width: 100%;
   background-image: url('../img/cardTable.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+.app-container {
+  width: 70%;
+  margin: 0 auto 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.button: {
+  position: absolute;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px;
 }
 
 .card {
