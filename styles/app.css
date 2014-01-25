@@ -5,12 +5,50 @@
   border-radius: 5px;
   height: 140px;
   margin-right: 20px;
+  /*z-index: 1;*/
 }
 
-.covered {
-  background-color: black;
+.face {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  /*-webkit-backface-visibility: hidden;*/
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  background-image: url('../img/card-back.png');
+  background-size: 100% 100%;
+  top: 0;
+  -webkit-backface-visibility: hidden;
 }
 
 .hand {
   overflow: auto;
 }
+
+img {
+  width: 100%;
+  height: inherit;
+}
+
+.revealed .innerCard{
+  -webkit-transform: rotateY(180deg);
+}
+
+.card {
+  -webkit-perspective: 1000;
+}
+
+.innerCard {
+  width: 100%;
+  height: inherit;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all 1.0s linear;
+}
+
+/*.coveredImg {
+  display: none;
+}*/
