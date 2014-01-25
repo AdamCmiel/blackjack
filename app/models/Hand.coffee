@@ -7,7 +7,6 @@ class window.Hand extends Backbone.Collection
   hit: -> 
     @add(@deck.pop())
     if @busted() 
-      debugger
       @trigger 'bust'
     @last()
 
