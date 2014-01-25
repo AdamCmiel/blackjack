@@ -15,3 +15,12 @@ class window.Card extends Backbone.Model
   flip: ->
     @set 'revealed', !@get 'revealed'
     @
+
+###
+input params.rank: 
+0: King
+1: Ace
+2-10: obvious
+11: Jack
+12: Queen
+###

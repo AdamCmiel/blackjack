@@ -1,16 +1,82 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  width: 100%;
+  background-image: url('../img/cardTable.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.app-container {
+  width: 70%;
+  margin: 0 auto 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.button: {
+  position: absolute;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px;
+}
+
 .card {
   float: left;
-  border: solid 1px black;
   width: 100px;
   border-radius: 5px;
   height: 140px;
-  margin-right: 20px;
+  margin: 5px 20px 5px 0;
 }
 
-.covered {
-  background-color: black;
+.container{
+  display: block;
+}
+
+.face {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  background-image: url('../img/card-back.png');
+  background-size: 100% 100%;
+  top: 0;
+}
+
+.front {
+  -webkit-backface-visibility: hidden;
 }
 
 .hand {
+  display: block;
   overflow: auto;
+}
+
+img {
+  width: 100%;
+}
+
+.covered .innerCard{
+  -webkit-transform: rotateY(180deg);
+}
+
+.innerCard {
+  border: 1px solid black;
+  border-radius: 5px;
+  -webkit-perspective: 1000;
+}
+
+.innerCard {
+  width: 100%;
+  height: inherit;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all 1.0s linear;
 }
