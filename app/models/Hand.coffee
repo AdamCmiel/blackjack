@@ -22,7 +22,8 @@ class window.Hand extends Backbone.Collection
       score + if card.get 'revealed' then card.get 'value' else 0
     , 0
     scores = if hasAce then [score, score + 10] else [score]
-    if scores[1] < 21 then scores[1] else scores[0]
+    debugger
+    if scores[1] <= 21 then scores[1] else scores[0]
 
   busted: ->
     @score() > 21
