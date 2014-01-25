@@ -1,18 +1,28 @@
+body {
+  font-family: sans-serif;
+  color: white;
+  width: 100%;
+  background-image: url('../img/cardTable.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 .card {
   float: left;
-  border: solid 1px black;
   width: 100px;
   border-radius: 5px;
   height: 140px;
-  margin-right: 20px;
-  /*z-index: 1;*/
+  margin: 5px 20px 5px 0;
+}
+
+.container{
+  display: block;
 }
 
 .face {
   position: absolute;
   height: inherit;
   width: 100%;
-  /*-webkit-backface-visibility: hidden;*/
 }
 
 .back {
@@ -22,23 +32,28 @@
   background-image: url('../img/card-back.png');
   background-size: 100% 100%;
   top: 0;
+}
+
+.front {
   -webkit-backface-visibility: hidden;
 }
 
 .hand {
+  display: block;
   overflow: auto;
 }
 
 img {
   width: 100%;
-  height: inherit;
 }
 
-.revealed .innerCard{
+.covered .innerCard{
   -webkit-transform: rotateY(180deg);
 }
 
-.card {
+.innerCard {
+  border: 1px solid black;
+  border-radius: 5px;
   -webkit-perspective: 1000;
 }
 
@@ -48,7 +63,3 @@ img {
   -webkit-transform-style: preserve-3d;
   -webkit-transition: all 1.0s linear;
 }
-
-/*.coveredImg {
-  display: none;
-}*/

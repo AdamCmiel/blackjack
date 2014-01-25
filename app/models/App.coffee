@@ -8,7 +8,6 @@ class window.App extends Backbone.Model
     @get('playerHand').on 'bust', @playerLoses, @
     @get('dealerHand').on 'bust', @playerWins, @
     @get('playerHand').on 'stand', @dealerPlays, @
-    @get('dealerHand').on 'stand', @whoWon, @
     if @get('wins') is undefined then @set 'wins', 0
     if @get('losses') is undefined then @set 'losses', 0
 
@@ -21,8 +20,8 @@ class window.App extends Backbone.Model
   dealerPlays: -> 
     playerScore = @get('playerHand').score()
     while @get('dealerHand').score() < 17
-      @get('dealerHand').hit()
-    if 21 > @get('dealerHand').score() > playerScore
+      @.get('dealerHand').hit()
+    if 21 >= @get('dealerHand').score() > playerScore
       @playerLoses()
     else if @get('dealerHand').score() is playerScore
       @push()
